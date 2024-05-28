@@ -1,7 +1,7 @@
 ---
 title: "Assignment 6"
 subtitle: "STAT 201"
-author: "YOUR NAME"
+author: "ADDVIKA V AGARWAL"
 
 format:
   html:
@@ -48,7 +48,7 @@ To get full credit for this Question you must:
 
 ## Github Repo Link
 
-[https://your-github-repo-url](https://your-github-repo-url)
+[https://github.com/Addvikaa/Agarwal_Addvika_201_A06](https://github.com/Addvikaa/Agarwal_Addvika_201_A06)
 
 :::
 
@@ -56,7 +56,7 @@ To get full credit for this Question you must:
 
 ## Screenshot/image of RStudio
 
-![](filepath.png)
+![](github_setup.png)
 
 :::
 
@@ -91,6 +91,7 @@ player_info <- list(MJ = list(name = "Michael Jordan",
                               games_played = 216,
                               points = 5250,
                               assists = 582))
+
 ```
 
 
@@ -106,6 +107,7 @@ Extract the value `8162` (LeBron James points) in 2 different ways:
 ```
 
 
+
 ### Part b (3 points)
 
 Add a new named element to the end of each player's list called `height`. The heights in inches are as follows: MJ = 78; LJ = 81; KB = 78; KA = 86; SO = 85.
@@ -115,6 +117,7 @@ Print the `player_info` list to prove you were successful.
 ```{r}
 
 ```
+
 
 
 ### Part c (3 points)
@@ -136,6 +139,7 @@ Note: this must still run correctly even if the values were to change or if anot
 ```
 
 
+
 ### Part d (1 point)
 
 Use the list created in Part c and an appropriate apply function to round each value to two decimal places.
@@ -147,15 +151,15 @@ Store the output as a vector and print the results.
 ```
 
 
+
 ## Question 3 (3 points)
 
 Consider the matrix `mat_rand` of random numbers below.
 
 ```{r}
-rand_num <- c(sample(10:100, 10), sample(100:999, 10), sample(1000:2000, 10))
 
-mat_rand <- matrix(sample(rand_num, 30), ncol = 5)
 ```
+
 
 Use an appropriate apply function to round values with 2 digits to the nearest tens, values with 3 digits to the nearest hundreds, and 4 digits to the nearest thousands.
 
@@ -166,6 +170,7 @@ Hint: use `MARGIN = 1:2` to apply the function to each value instead of only a r
 ```{r}
 
 ```
+
 
 
 ## Question 4 (9 points)
@@ -239,4 +244,6 @@ Run your function with 935068.
 ```{r}
 
 ```
+
+
 
