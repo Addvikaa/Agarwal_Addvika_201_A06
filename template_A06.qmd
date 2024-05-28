@@ -103,7 +103,13 @@ Extract the value `8162` (LeBron James points) in 2 different ways:
 - using names
 
 ```{r}
+# Accessing LeBron James' points using indexing
+lebron_points_indexing <- player_info$LJ$points
+print(lebron_points_indexing)
 
+# Accessing LeBron James' points using names
+lebron_points_names <- player_info[["LJ"]]$points
+print(lebron_points_names)
 ```
 
 
@@ -115,7 +121,15 @@ Add a new named element to the end of each player's list called `height`. The he
 Print the `player_info` list to prove you were successful.
 
 ```{r}
+# Heights in inches
+heights <- c(MJ = 78, LJ = 81, KB = 78, KA = 86, SO = 85)
 
+# Add height to each player's list
+for (player_name in names(player_info)) {
+  player_info[[player_name]]$height <- heights[player_name]
+}
+
+print(player_info)
 ```
 
 
