@@ -274,7 +274,15 @@ Example (this is NOT the answer just an example of what goes in the {}):
 Note: This code should still run successfully even if the numbers were to change.
 
 ```{r}
+annual_temps <- apply(temps_CO[, 3:14], 1, median)
 
+max_ind <- which.max(annual_temps)
+min_ind <- which.min(annual_temps)
+
+max_year <- temps_CO$year[max_ind]
+min_year <- temps_CO$year[min_ind]
+
+print(paste0("The maximum median annual temperature of ", annual_temps[max_ind], " occured in ", max_year, " and the minimum median annual temperature of ", annual_temps[min_ind], " occured in ", min_year, "."))
 ```
 
 
@@ -287,7 +295,23 @@ Example: The number 312 would return 6 (3 + 1 + 2)
 Run your function with 935068.
 
 ```{r}
+sum_of_digits <- function(n) {
+  if (n == 0){ # base case
+    return(0)
+  }else{
+  # Take the last digit of the number input
+  last_digit = n %% 10
 
+  #Truncate thr number input 
+  number_truncated = n %/% 10
+
+  # conitnually add the last digit 
+  return(last_digit + sum_of_digits(number_truncated))
+  }
+}
+
+# Test the function with the number 935068
+sum_of_digits(935068)
 ```
 
 
